@@ -9,18 +9,18 @@
                                                             :: Set CMD prompt window and text color
       color 1F
                                                             :: Reset software and programmer. Chose the cmd exe for programmer (PICKit3, ICD3, etc.)
-      pk3cmd.exe -h1										
+      icd3cmd.exe -h1										
 :start
-															:: Clears cmd prompt window
+							    :: Clears cmd prompt window
       cls													 
 :loop 
-															:: Print statement to screen
+							    :: Print statement to screen
       echo Connect Programmer to Target Device...			
 :loop 
-															:: Read device ID, to file
+							    :: Read device ID, to file
       echo ID Device...wait 10 - 15 seconds...				                        
       icd3cmd.exe -p16F15345 -GI >0_DeviceID_out.txt
-															:: End script if erorr occurs
+							    :: End script if erorr occurs
       if errorlevel 1 goto error							
                                                             :: Found 16F15345? output goes nowhere
       find /c "16F15345" 0_DeviceID_out.txt >nul
@@ -34,7 +34,7 @@
 	  
 :bcheck
 	  echo Check if Device is Blank...	
-															:: Blank Check, to file::    
+							    :: Blank Check, to file::    
 	  icd3cmd.exe -p16F15345 -c >2_BlankCheck_out.txt
       if errorlevel 1 goto error
                                                             :: PIC erased? 
@@ -57,8 +57,8 @@
       icd3cmd.exe -p16F15345 -fPowerRelay.0.9-10-gbb853d5.hex -mc -yc >5_ProgramConfigVerify.txt
       if errorlevel 1 goto error
       echo Programming Complete and Successful!
-      													    ::Jump straight to the end of the script 
-	  goto end
+      							    ::Jump straight to the end of the script 
+      goto end
 :tout
                                                             :: Check if target has been removed
       icd3cmd.exe -p16F15345 -GI >7_DeviceID_out2.txt
@@ -76,14 +76,14 @@
       goto start
 :error
       cls
-															::Set text color to red
-	  color 0C
+							   ::Set text color to red
+      color 0C
       echo A programming error occurred, device was not programmed!!!
       echo Error code : %errorlevel%
       echo.
       echo Press a button to quit.
       pause >nul
 :end
-	echo Disconnect Device...
-	echo Press a button to quit.
-    pause >nul 
+      echo Disconnect Device...
+      echo Press a button to quit.
+      pause >nul 
