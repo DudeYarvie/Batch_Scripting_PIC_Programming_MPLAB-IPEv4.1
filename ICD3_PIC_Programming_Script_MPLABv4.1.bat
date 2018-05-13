@@ -86,4 +86,4 @@
 :end
       echo Disconnect Device...
       echo Press a button to quit.
-      pause >nul 
+      pause >nul
