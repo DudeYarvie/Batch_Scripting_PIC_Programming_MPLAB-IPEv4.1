@@ -12,4 +12,4 @@ Automated programming of PIC MCUs using batch script and MPLAB IDE v4.1 utilitie
 
    >icd3cmd.exe -p16F1823 -fFirmware.hex -sSQTP_EEPROM_Entire_IMG.num -mc -me -mp
 
-4.From what I've witnessed .hex and .num need to be programmed at the same time in order for the EEPROM memory to be written.
+4. From what I've witnessed .hex and .num need to be programmed at the same time in order for the EEPROM memory to be written.
