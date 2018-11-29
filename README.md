@@ -2,8 +2,8 @@
 Automated programming of PIC MCUs using batch script and MPLAB IDE v4.1 utilities  
 
 ## File Descriptions
-.bat file provides reference for getting started with scripting the programming of PIC MCUs
-.num is a reference for programming a PIC EEPROM. This file was written specifically to write all 256 bytes of the PIC16F1823 EEPROM at once.  
+1. .bat file provides reference for getting started with scripting the programming of PIC MCUs
+2. .num is a reference for programming a PIC EEPROM. This file was written specifically to write all 256 bytes of the PIC16F1823 EEPROM at once.  
 
 ## Usage
 1. Navigate to the MPLAB IPE directory on your workstation (ex. C:\Program Files\Microchip\MPLABX\vX.XX\mplab_ipe) using the OS command-line interpreter (Windows = CMD prompt)
